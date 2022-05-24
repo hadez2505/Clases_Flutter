@@ -6,10 +6,20 @@ class HomeScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('HomeScreen'),
+    return  Scaffold(
+      appBar: AppBar(
+        title: const Text('Components in Flotter'),
       ),
+      body: ListView.separated(
+        itemCount       : 10,
+        separatorBuilder: (_,__)=>const Divider(), 
+        itemBuilder     : (context,index)=> ListTile(
+          title   : const Text('Nombre de Ruta'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
+          onTap   : (){},
+        ), 
+      )
+
     );
   }
 }
