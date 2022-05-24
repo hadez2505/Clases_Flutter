@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       //home: ListView2Screen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
+      routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute//genera una ruta en caso de que no exista la que se especifico
     );
   }
